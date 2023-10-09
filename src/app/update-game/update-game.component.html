@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Game</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    
+    <!--Main Content-->
+    <div class="my-5">
+      <div class="mx-auto w-25 " style="max-width:100%;">
+        <h2 class="text-center mb-3">Update Game</h2>
+        <form  [formGroup]="form" (ngSubmit)="submit()" >
+
+          <!--Title-->
+          <div class="row">
+            <div class="col-md-12 form-group mb-3">
+              <label for="title" class="form-label">Title</label>
+              <input id="title"  formControlName="title" type="title" name="title" class="form-control" placeholder="title" required>
+            </div>
+          </div>
+
+          <!--Price-->
+          <div class="row">
+            <div class="col-md-12 form-group mb-3">
+              <label for="price" class="form-label">Price</label>
+              <input id="price"  formControlName="price" type="price" name="price" class="form-control" placeholder="price" required>
+            </div>
+          </div>
+
+          
+          <!--codebar-->
+          <div class="row">
+            <div class="col-md-12 form-group mb-3">
+              <label for="pNo" class="form-label">Codebar</label>
+              <input id="pcodebarNo" type="text" formControlName="codebar" name="codebar"class="form-control" placeholder="codebar" required>
+            </div>
+          </div>
+         
+            
+          <!--description-->
+          <div class="row">
+            <div class="col-md-12 form-group mb-3">
+              <label for="Description" class="form-label">Description</label>
+              <textarea id="Description" formControlName="description" type="text" name="description"  class="form-control"  rows="3" required></textarea>
+            </div>
+          </div>
+         
+          <div class="row">
+            <div class="col-md-12 form-group">
+              <button [disabled]="!form.valid" class="btn btn-primary w-100" type="submit" value="Submit">Submit</button>
+            </div>
+          </div>
+
+          <div>
+            
+          </div>
+        </form>
+  
+      </div>
+    </div>
+    
+</body>
+</html>
+

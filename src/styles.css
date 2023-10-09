@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+
+  /* Nel tuo file CSS globale (styles.css) */
+body {
+    background-image: url('../src/assets/car.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    z-index: -1; /* Imposta un valore negativo per posizionare l'immagine di sfondo dietro agli altri elementi */
+  }
+  
+  
